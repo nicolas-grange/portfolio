@@ -1,0 +1,111 @@
+@import "../../styles/variables.scss";
+
+.contact {
+  transition: opacity 500ms;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  h2 {
+    &::after {
+      content: "CONTACT";
+    }
+  }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    ul {
+      margin: 0 auto;
+      max-width: 15rem;
+
+      li {
+        margin-bottom: 5rem;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &,
+        a {
+          display: flex;
+          color: var(--color-grey-1);
+        }
+
+        a {
+          transition: color 300ms;
+
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+
+        h3 {
+          margin-top: 0;
+        }
+
+        svg {
+          height: 2rem;
+          width: 2rem;
+
+          path {
+            fill: var(--color-primary);
+          }
+        }
+
+        .contact-information {
+          margin-left: 2rem;
+          display: flex;
+          flex-direction: column;
+
+          .title {
+            color: var(--color-light);
+            margin-bottom: .75rem;
+            font-weight: 600;
+          }
+
+          address {
+            line-height: 1.5;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xs) {
+    .contact-layout {
+      ul {
+        display: flex;
+        gap: 5rem;
+        flex-wrap: wrap;
+        max-width: inherit;
+
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    .contact-layout {
+      ul {
+        gap: 8rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-l) {
+    .contact-layout {
+      grid-template-columns: 40% 60%;
+
+      ul {
+        max-width: 15rem;
+        gap: 8rem;
+      }
+    }
+  }
+}

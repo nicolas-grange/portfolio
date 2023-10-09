@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.timeline {
+  position:relative;
+  margin-left: 1rem;
+
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width:.2rem;
+    transform: translate(-50%);
+    height: 100%;
+    background: var(--color-grey-4);
+  }
+
+  .timeline-progress {
+    content: '';
+    position: absolute;
+    left: 0;
+    transform: translate(-50%);
+    top: 0;
+    width:.4rem;
+    height: 100%;
+    border-radius: 1rem;
+    background: var(--color-primary);
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    margin-left: 0;
+
+    &::before{
+      left: 50%;
+    }
+
+    .timeline-progress {
+      left: 50%;
+    }
+  }
+}

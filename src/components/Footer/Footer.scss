@@ -1,0 +1,61 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  margin-top: 5rem;
+  color: var(--color-grey-1);
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-grey-4);
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+
+    ul {
+      display: flex;
+      gap: 2rem;
+
+      li {
+        a {
+
+          &:hover {
+            svg,
+            svg path {
+              fill: var(--color-primary);
+            }
+          }
+
+          svg,
+          svg path {
+            fill: var(--color-grey-1);
+            transition: fill 500ms;
+          }
+
+          svg {
+            width: 1.7rem;
+            height: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-l) {
+    div {
+      ul {
+        gap: 2.5rem;
+
+        li {
+          a {
+            svg {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

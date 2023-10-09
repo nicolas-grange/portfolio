@@ -1,0 +1,119 @@
+@import "../../../styles/variables";
+
+.navigation {
+  z-index: 10;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .main-menu {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    ul li {
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 1;
+      text-transform: capitalize;
+      padding: 2rem 0;
+
+      @for $i from 1 to 5 {
+        &:nth-child(#{$i}) {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+      }
+
+      a {
+        color: var(--color-light);
+        transition: color 300ms;
+
+        &:hover,
+        &.active {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-s) {
+    position: inherit;
+    height: initial;
+    visibility: visible;
+    background-color: var(--color-dark);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    .main-menu {
+      text-align: left;
+      margin: 0;
+
+      ul {
+        display: flex;
+        padding: 1rem 0;
+
+        li {
+          font-size: 1.1rem;
+          padding: 0;
+
+          @for $i from 1 to 5 {
+            &:nth-child(#{$i}) {
+              opacity: inherit;
+              transform: inherit;
+            }
+          }
+
+          a {
+            padding-right: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    .main-menu {
+      ul {
+        padding: 1.2rem 0;
+
+        li {
+          font-size: 1.2rem;
+
+          a {
+            padding-right: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xl) {
+    .main-menu {
+      ul {
+        padding: 1.3rem 0;
+
+        li {
+          font-size: 1.2rem;
+
+          a {
+            padding-right: 5rem;
+          }
+        }
+      }
+    }
+  }
+}

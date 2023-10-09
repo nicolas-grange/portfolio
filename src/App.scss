@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@900&family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "./styles/normalize.scss";
+@import "./styles/variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans Display', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.app {
+  background: var(--color-dark);
+  color: var(--color-grey-1);
+  width: 100%;
+  overflow: hidden;
+
+  .container {
+    max-width: $size-screen-xl;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+  }
+
+  h1,
+  h2 {
+    font-family: 'Archivo Black', sans-serif;
+    color: var(--color-light);
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    z-index: 2;
+    font-size: 2.5rem;
+    padding-bottom: 5rem;
+    color: var(--color-grey-3);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 10%;
+      top: 1.5rem;
+      transform: translateY(-50%);
+      font-size: 15rem;
+      color: var(--color-grey-2);
+      opacity: .15;
+      z-index: -1;
+    }
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    color: var(--color-light);
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: $size-screen-xs) {
+    section {
+      padding: 6rem 0;
+    }
+
+    .wrapper {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      padding-bottom: 6rem;
+
+      &::after {
+        left: 12%;
+        font-size: 18rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-s) {
+    section {
+      padding: 7rem 0;
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+
+    h2 {
+      font-size: 5rem;
+      padding-bottom: 7rem;
+
+      &::after {
+        left: 15%;
+        font-size: 20rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    section {
+      padding: 8rem 0;
+    }
+
+    h1 {
+      font-size: 6.5rem;
+    }
+
+    h2 {
+      font-size: 6rem;
+      padding-bottom: 8rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-l) {
+    section {
+      padding: 9rem 0;
+    }
+
+    h1 {
+      font-size: 7.5rem;
+    }
+
+    h2 {
+      font-size: 8rem;
+      padding-bottom: 9rem;
+
+      &::after {
+        font-size: 22rem;
+        top: 25%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xl) {
+    section {
+      padding: 10rem 0;
+    }
+
+    h1 {
+      font-size: 9rem;
+    }
+
+    h2 {
+      font-size: 9rem;
+
+      &::after {
+        font-size: 22rem;
+        top: 30%;
+      }
+    }
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xxl) {
+    h1 {
+      font-size: 9.5rem;
+    }
+
+    h2 {
+      font-size: 10rem;
+
+      &::after {
+        font-size: 24rem;
+        top: 35%;
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../../styles/variables";
+
+.nav-overlay {
+  position: absolute;
+  left: 24px;
+  top: 20px;
+  z-index: -1;
+  border-radius: 50%;
+  transition: transform 500ms;
+  transform: scale3d(0, 0, 0);
+  background-color: var(--color-dark);
+
+  @media screen and (min-width: $size-screen-s) {
+    display: none;
+  }
+}

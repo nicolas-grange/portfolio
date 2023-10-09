@@ -1,0 +1,36 @@
+@import "../../../styles/variables";
+
+.burger-menu {
+  display: block;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  position: relative;
+  z-index: 100;
+
+  span {
+    background-color: var(--color-light);
+    height: 2px;
+    border-radius: 2px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    transform: translate(-50%);
+    transform-origin: center;
+    content: '';
+    transition: transform 500ms, top 500ms, left 500ms, width 500ms, background-color 500ms;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        top: 12px + $i*6px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-s) {
+    display: none;
+  }
+}

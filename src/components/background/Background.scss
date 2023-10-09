@@ -1,0 +1,13 @@
+.background {
+  transition: opacity 500ms;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  h2 {
+    &::after {
+      content: "BACKGROUND";
+    }
+  }
+}

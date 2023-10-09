@@ -1,0 +1,31 @@
+$size-screen-xs: 576px; // Small devices (landscape phones, 576px and up)
+$size-screen-s: 768px; // Medium devices (tablets, 768px and up)
+$size-screen-m: 992px; // Large devices (desktops, 992px and up)
+$size-screen-l: 1200px; // Extra large devices (large desktops, 1200px and up)
+$size-screen-xl: 1480px;
+$size-screen-xxl: 2000px;
+
+
+:root {
+  --color-primary: #FFCA4DFF;
+  --color-light: #FFFFFF;
+  --color-grey-1: #888888;
+  --color-grey-2: #333333;
+  --color-grey-3: #AAAAAA;
+  --color-grey-4: #262626;
+  --color-dark: #181818FF;
+}
+
+.app[data-theme='light'] {
+  --color-primary: #ffbb44;
+  --color-light: #181818FF;
+  --color-grey-1: #333333;
+  --color-grey-2: #CCC;
+  --color-grey-3: #454545;
+  --color-grey-4: #F5F5F5;
+  --color-dark: #FFFFFF;
+}
+
+html[data-theme='dark'] {
+
+}

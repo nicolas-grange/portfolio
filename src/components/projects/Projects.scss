@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+
+.projects {
+  transition: opacity 500ms;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  h2 {
+    &::after {
+      content: "PROJETS";
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5rem;
+
+    li {
+      height: 100%;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xs) {
+    ul {
+      grid-gap: 8rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-s) {
+    ul {
+      grid-gap: 10rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    ul {
+      grid-gap: 8rem 5rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: $size-screen-l) {
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

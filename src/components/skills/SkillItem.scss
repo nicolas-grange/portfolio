@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+
+.skill-item {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  transition: opacity 1000ms;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  span {
+    color: var(--color-light);
+    padding-top: 1rem;
+    font-weight: 600;
+  }
+
+  @media screen and (min-width: $size-screen-xs) {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  @media screen and (min-width: $size-screen-s) {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  @media screen and (min-width: $size-screen-l) {
+    width: 8rem;
+    height: 8rem;
+  }
+}

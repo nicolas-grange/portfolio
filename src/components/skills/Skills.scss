@@ -1,0 +1,52 @@
+@import "../../styles/variables.scss";
+
+.skills {
+  transition: opacity 500ms;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  h2 {
+    &::after {
+      content: "COMPETENCES";
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem 4rem;
+  }
+
+  @media screen and (min-width: $size-screen-xs) {
+    ul {
+      gap: 6rem 7rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-s) {
+    ul {
+      gap: 8rem 7rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    ul {
+      gap: 9rem 10rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-l) {
+    ul {
+      gap: 10rem 11rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xl) {
+    ul {
+      gap: 12rem 13rem;
+    }
+  }
+}

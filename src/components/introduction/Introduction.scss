@@ -1,0 +1,105 @@
+@import "../../styles/variables.scss";
+
+.introduction {
+  .name-title {
+    h2 {
+      font-family: 'Noto Sans Display', sans-serif;
+      text-transform: capitalize;
+      font-weight: 900;
+      font-size: 2rem;
+      padding: 2rem 0;
+      margin: 0rem 0 5rem;
+
+      span {
+        color: var(--color-primary);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 45%;
+        height: .1rem;
+        background: var(--color-primary);
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xs) {
+    .name-title {
+      h2 {
+        font-size: 3rem;
+        padding: 2.5rem 0 3rem;
+
+        &::before {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-s) {
+    .name-title {
+      h2 {
+        font-size: 3.5rem;
+        padding: 3rem 0 4rem;
+
+        &::before {
+          width: 35%;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-m) {
+    display: flex;
+
+    .name-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      h2 {
+        font-size: 2.5rem;
+        padding: 2rem 0 3rem;
+        margin: 0 0 0 8rem;
+
+        &::before {
+          width: 100vw;
+        }
+      }
+    }
+    
+    p {
+      max-width: 50rem;
+    }
+  }
+
+  @media screen and (min-width: $size-screen-l) {
+    .name-title {
+      h2 {
+        font-size: 3rem;
+        padding: 2rem 0 3rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xl) {
+    .name-title {
+      h2 {
+        font-size: 3.5rem;
+        padding: 2rem 0 3.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $size-screen-xxl) {
+    .name-title {
+      h2 {
+        font-size: 3.7rem;
+        padding: 2rem 0 4rem;
+      }
+    }
+  }
+}
