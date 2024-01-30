@@ -12,7 +12,7 @@ export const Map = () => {
   useEffect(() => {
     if (mapRef.current) return;
     const zoom = 12;
-    const position = [55.5589471, -21.3404731];
+    const position = [55.5606321, -21.347891];
     mapRef.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: mapBoxStyle,

@@ -42,11 +42,11 @@ export const Contact = () => {
               </a>
             </li>
             <li>
-              <a href="tel:+33623271463">
+              <a href="tel:0623271463">
                 <PhoneLogo />
                 <div className="contact-information">
                   <h3 className="title">Tel</h3>
-                  <span>+33 6 23 27 14 63</span>
+                  <span>06 23 27 14 63</span>
                 </div>
               </a>
             </li>
@@ -55,7 +55,7 @@ export const Contact = () => {
               <div className="contact-information">
                 <h3 className="title">Adresse</h3>
                 <address>
-                  7 rue des Benjoins<br/>Ravine du Pont<br/>97429 Petite-Ile<br/>Réunion
+                  46 chemin Cambrai<br/>97429 Petite-Ile<br/>Réunion
                 </address>
               </div>
             </li>
