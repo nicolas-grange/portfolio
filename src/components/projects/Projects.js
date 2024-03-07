@@ -16,7 +16,7 @@ const projects = [
     title: "Path Finding",
     image: project3,
     description: "Petite application permettant de visualier la progression des algorithmes de recherche de chemins en fonction de différents paramètres. Site créé pour une présentation d'équipe sur l'IA.",
-    link: "#"
+    link: "https://nicolas-grange.github.io/IA/"
   },
   {
     title: "Photography website",
